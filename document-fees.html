@@ -13,8 +13,12 @@
 	  <script type="text/javascript" src="va.js"></script>
       <script type="text/javascript">
          /* page specific js */
+         $(document).ready(function() {
 
-
+         $("input").change(function () {
+          $("#fee-payable").html("$"+$(this).val()*130);
+         });
+        });
       </script>
    </head>
    <body class="live-demo au-body au-grid">
@@ -83,7 +87,7 @@
 <input class="au-text-input" name="text-input" id="text-input" style="width:5rem;" type="text" value="1">
 
 
-<p><strong>Total payable: $130</strong></p>
+<p><strong>Total payable: <span id="fee-payable">$130</span></strong></p>
 
 </div>
 
